@@ -1,0 +1,27 @@
+// Typography
+$font-family-sans-serif: 'Raleway', sans-serif;
+
+// Color
+$primary: #EF1B48;
+$danger: #2F2F2F;
+$warning: #2F2F2F;
+$success: #0B87D6;
+
+// Border
+$border-width: 1.25px;
+
+// Input Tag
+$input-placeholder-color: #adb5bd;
+$input-btn-focus-box-shadow: none;
+$form-select-focus-box-shadow: none;
+
+
+// Import Bootstrap variables for use within theme
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+
+// Import spacing variables
+@import "./variables/spacing.scss";
+
+// Import navigation variables
+@import "./variables/navigation.scss";
