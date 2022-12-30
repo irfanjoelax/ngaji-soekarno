@@ -14,6 +14,7 @@ Website profile untuk Ngaji Soekarno yaitu Komunitas yang bergerak dibidang pemi
 ### Composer Package
 - laravel/ui for authentication
 - realrashid/sweet-alert for Sweet Alert
+- laraveldaily/laravel-chart for Chart
 
 ### Library
 - SweetAlert

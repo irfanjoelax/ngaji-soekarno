@@ -82,7 +82,7 @@
     <!-- ##### Footer Area Start ##### -->
     <footer class="footer-area">
         <!-- Footer Logo -->
-        <div class="footer-logo mb-100">
+        <div class="footer-logo mb-3">
             <a href="{{ url('/') }}"><img src="{{ asset('img/logo.svg') }}" width="50"></a>
         </div>
         <!-- Footer Content -->
@@ -90,22 +90,6 @@
             <div class="row">
                 <div class="col-12">
                     <div class="footer-content text-center">
-                        <!-- Social Info -->
-                        <div class="footer-social-info">
-                            <a href="#" data-toggle="tooltip" data-placement="top" title="pinterest"><i
-                                    class="fa fa-pinterest" aria-hidden="true"></i></a>
-                            <a href="#" data-toggle="tooltip" data-placement="top" title="facebook"><i
-                                    class="fa fa-facebook" aria-hidden="true"></i></a>
-                            <a href="#" data-toggle="tooltip" data-placement="top" title="twitter"><i
-                                    class="fa fa-twitter" aria-hidden="true"></i></a>
-                            <a href="#" data-toggle="tooltip" data-placement="top" title="dribbble"><i
-                                    class="fa fa-dribbble" aria-hidden="true"></i></a>
-                            <a href="#" data-toggle="tooltip" data-placement="top" title="behance"><i
-                                    class="fa fa-behance" aria-hidden="true"></i></a>
-                            <a href="#" data-toggle="tooltip" data-placement="top" title="linkedin"><i
-                                    class="fa fa-linkedin" aria-hidden="true"></i></a>
-                        </div>
-
                         <!-- Copywrite Text -->
                         <p class="copywrite-text">
                             Powered by &copy; {{ date('Y') }} All rights reserved <a
