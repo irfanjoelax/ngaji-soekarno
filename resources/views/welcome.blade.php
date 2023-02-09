@@ -67,7 +67,8 @@
                                                 <!-- Blog Content -->
                                                 <div class="blog-content">
                                                     <span class="post-date">
-                                                        {{ Str::substr($item->created_at, 0, 10) }}
+                                                        {{ Str::ucfirst($item->category) }} &#8226;
+                                                        {{ $item->created_at->diffForHumans() }}
                                                     </span>
                                                     <a href="{{ route('post.detail', ['slug' => $item->slug]) }}"
                                                         class="post-title">
@@ -101,7 +102,8 @@
                                                 <!-- Blog Content -->
                                                 <div class="blog-content">
                                                     <span class="post-date">
-                                                        {{ Str::substr($item->created_at, 0, 10) }}
+                                                        {{ Str::ucfirst($item->category) }} &#8226;
+                                                        {{ $item->created_at->diffForHumans() }}
                                                     </span>
                                                     <a href="{{ route('post.detail', ['slug' => $item->slug]) }}"
                                                         class="post-title">

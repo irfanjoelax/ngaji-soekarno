@@ -44,9 +44,14 @@ class PostController extends Controller
         $category = $request->input('category');
 
         $image = 'post/default.svg';
+        $file = null;
 
         if ($request->has('image')) {
             $image = $request->file('image')->store('post');
+        }
+
+        if ($request->has('file')) {
+            $file = $request->file('file')->store('file');
         }
 
         Post::create([
@@ -57,6 +62,7 @@ class PostController extends Controller
             'category' => $category,
             'author'   => $request->author,
             'visited'  => 0,
+            'file'     => $file,
         ]);
 
         Alert::success('Created', 'Post ' . $category . ' has been created');
@@ -88,10 +94,16 @@ class PostController extends Controller
         $post = Post::findOrFail($id);
 
         $image = $post->image;
+        $file = $post->file;
 
         if ($request->has('image')) {
             Storage::delete($post->image);
             $image = $request->file('image')->store('post');
+        }
+
+        if ($request->has('file')) {
+            Storage::delete($post->file);
+            $file = $request->file('file')->store('file');
         }
 
         $post->update([
@@ -100,6 +112,7 @@ class PostController extends Controller
             'image'   => $image,
             'content' => $request->content,
             'author'  => $request->author,
+            'file'    => $file,
         ]);
 
         Alert::info('Updated', 'Post ' . $category . ' has been updated');
@@ -114,6 +127,10 @@ class PostController extends Controller
         $post = Post::findOrFail($id);
 
         Storage::delete($post->image);
+
+        if ($post->file != null) {
+            Storage::delete($post->file);
+        }
 
         $post->delete();
 

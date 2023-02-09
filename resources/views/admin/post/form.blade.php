@@ -68,7 +68,7 @@
 
                     <div class="row mb-lg-4 mb-md-3 mb-2">
                         <div class="col-sm-12">
-                            <small class="text-muted">File Image For Your Post</small>
+                            <small class="text-muted">Image For Your Post</small>
                             <input type="file" class="form-control" name="image">
                         </div>
                     </div>
@@ -78,6 +78,18 @@
                             <textarea name="content" class="form-control summernote" placeholder="Masukkan Title Post" required>{{ $isEdit ? $data->content : '' }}</textarea>
                         </div>
                     </div>
+
+                    @if ($category == 'buletin')
+                        <div class="row mb-lg-4 mb-md-3 mb-2">
+                            <div class="col-sm-12">
+                                <small class="text-muted">
+                                    File for User Download
+                                    <span class="text-primary">(doc/docx/pdf)</span>
+                                </small>
+                                <input type="file" class="form-control" name="file">
+                            </div>
+                        </div>
+                    @endif
 
                     <div class="row mt-lg-4 mt-3">
                         <div class="col-12">

@@ -25,7 +25,8 @@
                             <!-- Blog Content -->
                             <div class="blog-content">
                                 <span class="post-date">
-                                    {{ Str::substr($item->created_at, 0, 10) }}
+                                    {{ Str::ucfirst($item->category) }} &#8226;
+                                    {{ $item->created_at->diffForHumans() }}
                                 </span>
                                 <a href="{{ route('post.detail', ['slug' => $item->slug]) }}" class="post-title">
                                     {{ $item->title }}
@@ -33,6 +34,13 @@
                                 <a href="{{ route('post.detail', ['slug' => $item->slug]) }}" class="post-author">
                                     By {{ $item->author }}
                                 </a>
+                                @if ($item->category == 'buletin')
+                                    <a href="{{ asset('storage/' . $item->file) }}"
+                                        class="mt-3 btn btn-block text-decoration-none text-white"
+                                        style="background-color: #EF1B48">
+                                        Unduh
+                                    </a>
+                                @endif
                             </div>
                         </div>
                     </div>
