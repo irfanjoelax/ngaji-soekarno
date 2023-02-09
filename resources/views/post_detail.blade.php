@@ -28,6 +28,15 @@
             <div class="row justify-content-center">
                 <!-- Post Details Content Area -->
                 <div class="col-12 col-lg-8">
+
+                    @if ($post->category == 'buletin')
+                        @if ($post->file != null)
+                            <a href="" class="btn text-white mb-4" style="background-color: #EF1B48">
+                                Unduh File
+                            </a>
+                        @endif
+                    @endif
+
                     <div class="post-details-content mb-100">
                         {!! $post->content !!}
                     </div>

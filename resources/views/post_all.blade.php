@@ -35,11 +35,13 @@
                                     By {{ $item->author }}
                                 </a>
                                 @if ($item->category == 'buletin')
-                                    <a href="{{ asset('storage/' . $item->file) }}"
-                                        class="mt-3 btn btn-block text-decoration-none text-white"
-                                        style="background-color: #EF1B48">
-                                        Unduh
-                                    </a>
+                                    @if ($item->file != null)
+                                        <a href="{{ asset('storage/' . $item->file) }}"
+                                            class="mt-3 btn btn-block text-decoration-none text-white"
+                                            style="background-color: #EF1B48">
+                                            Unduh
+                                        </a>
+                                    @endif
                                 @endif
                             </div>
                         </div>
