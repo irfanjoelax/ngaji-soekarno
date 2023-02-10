@@ -36,7 +36,7 @@
                                 </a>
                                 @if ($item->category == 'buletin')
                                     @if ($item->file != null)
-                                        <a href="{{ asset('storage/' . $item->file) }}"
+                                        <a target="_blank" href="{{ asset('storage/' . $item->file) }}"
                                             class="mt-3 btn btn-block text-decoration-none text-white"
                                             style="background-color: #EF1B48">
                                             Unduh

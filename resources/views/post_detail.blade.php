@@ -31,7 +31,8 @@
 
                     @if ($post->category == 'buletin')
                         @if ($post->file != null)
-                            <a href="" class="btn text-white mb-4" style="background-color: #EF1B48">
+                            <a target="_blank" href="{{ asset('storage/' . $item->file) }}" class="btn text-white mb-4"
+                                style="background-color: #EF1B48">
                                 Unduh File
                             </a>
                         @endif
